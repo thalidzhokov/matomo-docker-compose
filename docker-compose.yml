@@ -5,6 +5,7 @@ services:
   mariadb:
     container_name: "${PROJECT_NAME}_mariadb"
     image: mariadb:latest
+    command: --max_allowed_packet=67108864
     stop_grace_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD

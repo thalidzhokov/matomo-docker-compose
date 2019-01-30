@@ -38,8 +38,8 @@ services:
       DOMAINS: $PROJECT_DOMAINS
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - nginx:/etc/letsencrypt
-      - nginx:/var/www/certbot
+      - letsencrypt:/etc/letsencrypt
+      - certbot:/var/www/certbot
     links:
       - matomo
     volumes_from:
@@ -58,6 +58,8 @@ services:
 volumes:
   mariadb:
     driver: local
-  nginx:
+  letsencrypt:
+    driver: local
+  certbot:
     driver: local
 

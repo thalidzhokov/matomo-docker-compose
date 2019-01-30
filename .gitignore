@@ -4,3 +4,6 @@
 # IDE
 .idea
 
+# Project
+.env
+

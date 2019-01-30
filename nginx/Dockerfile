@@ -26,6 +26,9 @@ RUN mkdir -p /etc/nginx/ssl/example.net \
         -subj "/C=/ST=/L=/O=/CN=example.net" \
         && ln -sf /etc/nginx/ssl/example.net /etc/nginx/ssl/latest
 
+ADD certbot.sh /etc/nginx/ssl/
+RUN chmod +x /etc/nginx/ssl/certbot.sh
+
 RUN usermod -u 1000 www-data
 
 CMD ["nginx"]

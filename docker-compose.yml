@@ -32,7 +32,7 @@ services:
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
     build: ./nginx
-    command: "/bin/sh -c 'while :; do /etc/nginx/ssl/certbot.sh -v; sleep 24h & wait $${!}; done &"
+    command: "/bin/sh -c 'while :; do /etc/nginx/ssl/certbot.sh -v; sleep 24h & wait $${!}; done & nginx'"
     environment:
       EMAIL: $PROJECT_EMAIL
       DOMAINS: $PROJECT_DOMAINS

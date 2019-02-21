@@ -1,4 +1,4 @@
-# Docker for Matomo
+# Docker Compose for Matomo
 Docker Compose (docker-compose.yml) for Matomo based on official Docker Image (https://hub.docker.com/_/matomo/) with Nginx (and Certbot included) and Redis ready
 
 ### Requirements

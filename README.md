@@ -1,4 +1,5 @@
 # Docker for Matomo
+Docker Compose (docker-compose.yml) for Matomo based on official Docker Image (https://github.com/matomo-org/docker) with Nginx (and Certbot included) and Redis ready
 
 ### Requirements
 1. Git (e.g. https://desktop.github.com/)

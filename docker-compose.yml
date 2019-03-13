@@ -28,6 +28,8 @@ services:
     volumes:
       - ./matomo/config:/var/www/html/config
       - ./matomo/logs:/var/www/html/logs
+      - plugins:/varwww/html/plugins
+      - ./matomo/plugins:/var/www/html/plugins
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
@@ -58,6 +60,12 @@ services:
 volumes:
   mariadb:
     driver: local
+  plugins:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/matomo/plugins
+      o: bind
   letsencrypt:
     driver: local
   certbot:

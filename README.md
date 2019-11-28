@@ -11,7 +11,7 @@ Docker Compose (docker-compose.yml) for Matomo based on official Docker Image (h
 ### Usage
 1. Clone this repo and go to repo folder
     ```bash
-    git clone https://github.com/thalidzhokov/matomo-docker.git && cd matomo-docker
+    git clone https://github.com/thalidzhokov/matomo-docker-compose.git && cd matomo-docker-compose
     ```
     
 2. Copy `.env.dist` to `.env`

@@ -66,7 +66,7 @@ function certbot_init ()
     DOMAINS=$(eval echo $DOMAINS | sed -e "s| \+|,|g")
 
     log "Requesting initial certificate for ${DOMAINS}"
-    ${CERTBOT} certonly --agree-tos --email ${EMAIL} -d ${DOMAINS}
+    ${CERTBOT} certonly -d ${DOMAINS} --agree-tos --register-unsafely-without-email
 }
 
 function certbot_renew ()

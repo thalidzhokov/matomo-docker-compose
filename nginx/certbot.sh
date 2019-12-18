@@ -51,7 +51,7 @@ done
 
 function install_link ()
 {
-    LATEST=$(ls -td1 ${LIVEDIR}/* | head -n1)
+    LATEST=$(ls -td1 ${LIVEDIR}/*/ | head -n1)
     log "Using live directory: ${LATEST}"
     rm -f ${SYMLINK}
     ln -sf ${LATEST} ${SYMLINK}
